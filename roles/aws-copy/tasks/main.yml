@@ -1,0 +1,16 @@
+---
+
+- name: install pip
+  easy_install: name=pip state=latest
+
+- name: install boto
+  pip: name=boto3
+
+- name: copy file from s3
+  aws_s3:
+    aws_access_key: '{{ access_key }}'
+    aws_secret_key: '{{ secret_key }}'
+    bucket: jenkins-artifacts-rajesh
+    object: sample.war
+    dest: /opt/tomcat/webapps/sample.war
+    mode: get
