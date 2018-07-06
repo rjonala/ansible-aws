@@ -13,8 +13,11 @@
 [docker]
 35.237.164.201
 
-[test-server]
+[test-server1]
 35.231.251.188
+
+[test-server2]
+35.186.163.93
 
 [docker-project]
 104.196.23.80
